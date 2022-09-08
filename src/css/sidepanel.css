@@ -1,0 +1,42 @@
+.sidepanel {
+  position: fixed;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.sidepanel-descr {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  transform: rotate(-90deg) translate(90px);
+}
+
+.sidepanel-dividor {
+  width: 1px;
+  height: 150px;
+  background-color: rgb(0, 0, 0);
+}
+
+.sidepanel-icon-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.sidepanel-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.sidepanel-icon:last-child {
+  margin-bottom: 0;
+}
+
+.sidepanel-img {
+  width: 100%;
+}

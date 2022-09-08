@@ -1,0 +1,37 @@
+.header-container {
+  height: 150px;
+}
+
+.header-logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-image {
+  width: 100px;
+  padding: 0 10px;
+}
+
+.header-logo-image:hover {
+  scale: 1.05;
+}
+
+.header-logo-image:active {
+  scale: 0.95;
+}
+
+.header-logo-title {
+  width: 200px;
+}
+
+.header-nav-link:hover::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 110%;
+  left: -5%;
+  bottom: -1px;
+  z-index: -1;
+  height: 5px;
+  background-color: var(--primary);
+}

@@ -1,0 +1,59 @@
+.promotion {
+  margin-top: 20px;
+  padding: 40px 0 60px 0;
+  position: relative;
+}
+
+.promotion-heading {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.promotion-paragraph {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.promotion-text {
+  width: 50%;
+}
+
+.promotion-text-percent {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.promotion-timer {
+  width: 50%;
+}
+
+.promotion-timer-heading {
+  text-align: right;
+}
+
+.promotion-timer-content {
+  margin-top: 40px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.promotion-timer-block {
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.promotion-timer-descr {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 60px;
+  font-weight: 600;
+}
