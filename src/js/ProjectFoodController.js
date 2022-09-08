@@ -10,7 +10,6 @@ export default class ProjectFoodController {
   }
 
   projectFoodControl() {
-    this.header.headerControl();
     this.preview.previewControl();
     this.offer.offerControl();
     this.calculating.calculatingControl();
