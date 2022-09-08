@@ -71,7 +71,6 @@
   font-weight: 500;
   cursor: pointer;
   margin-top: 10px;
-
 }
 
 .tabheader-item-active,
@@ -80,7 +79,6 @@
   font-size: 25px;
   font-weight: 700;
 }
-
 
 .preview-life {
   position: absolute;

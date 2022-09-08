@@ -1,5 +1,13 @@
 export default class ProjectFoodController {
-  constructor(container, header, preview, offer, calculating, promotion, modal) {
+  constructor(
+    container,
+    header,
+    preview,
+    offer,
+    calculating,
+    promotion,
+    modal,
+  ) {
     this.box = container;
     this.header = header;
     this.preview = preview;

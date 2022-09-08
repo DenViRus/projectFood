@@ -13,7 +13,6 @@
   max-width: 800px;
   min-width: 500px;
   margin: 100px auto;
-
 }
 
 .modal-content {
@@ -56,14 +55,11 @@
   color: rgb(0, 0, 0);
 }
 
-
-
 .modal-form {
   display: flex;
   flex-direction: column;
   width: 70%;
   margin: 20px auto;
-
 }
 
 .modal-input {

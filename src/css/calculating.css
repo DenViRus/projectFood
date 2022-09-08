@@ -68,7 +68,6 @@
   background-color: rgb(144, 238, 144);
 }
 
-
 /* ========================= */
 
 .calculating-gender-box-heading {
@@ -76,20 +75,18 @@
 }
 
 .calculating-gender-box-content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url('./../icons/switch.svg');
+  background-image: url("./../icons/switch.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
-
 
 /* ========================= */
 
@@ -102,10 +99,7 @@
 
 .calculating-params-item {
   width: 200px;
-
 }
-
-
 
 /* ========================= */
 
@@ -120,15 +114,12 @@
   width: 250px;
 }
 
-
-
 /* ========================= */
 .calculating-divider {
   width: 500px;
   height: 1px;
   margin: 40px auto;
   background-color: rgba(0, 0, 0, 0.3);
-
 }
 
 /* ========================= */

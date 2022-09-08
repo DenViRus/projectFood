@@ -26,6 +26,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const modalController = new ModalController(modal);
 
   const projectContainer = document.getElementById('projectContainer');
-  const projectFoodController = new ProjectFoodController(projectContainer, headerController, previewController, offerController, calculatingController, promotionController, modalController);
+  const projectFoodController = new ProjectFoodController(
+    projectContainer,
+    headerController,
+    previewController,
+    offerController,
+    calculatingController,
+    promotionController,
+    modalController,
+  );
   projectFoodController.projectFoodControl();
 });

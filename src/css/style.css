@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext");
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
---container-max-width: 1420px;
---container-min-width: 820px;
---container-padding: 10px;
---dark: rgb(48, 48, 48);
---primary: rgb(84, 237, 57);
---secondary: rgb(251, 254, 93, 0.7);
---bg1: rgb(146, 242, 255, 0.2);
---bg2: rgb(249, 254, 126, 0.2);
+  --container-max-width: 1420px;
+  --container-min-width: 820px;
+  --container-padding: 10px;
+  --dark: rgb(48, 48, 48);
+  --primary: rgb(84, 237, 57);
+  --secondary: rgb(251, 254, 93, 0.7);
+  --bg1: rgb(146, 242, 255, 0.2);
+  --bg2: rgb(249, 254, 126, 0.2);
 }
 
 .project-container {
@@ -30,7 +30,6 @@
   margin-left: 50px;
   display: flex;
   align-items: center;
-
 }
 
 .nav-list {
@@ -55,7 +54,7 @@
 }
 
 .nav-link:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 110%;
@@ -115,7 +114,7 @@
   width: 350px;
   height: 1px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5);;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .bgc-blue {
@@ -159,8 +158,6 @@
   z-index: -1;
 }
 
-
-
 .title {
   font-size: 30px;
   font-weight: 600;
@@ -169,7 +166,6 @@
 .hidden {
   display: none;
 }
-
 
 .fade {
   animation: fade 1s;

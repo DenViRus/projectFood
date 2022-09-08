@@ -8,14 +8,26 @@ export default class OfferController {
     this.offer = offer;
 
     this.offerAdvantages = this.offer.querySelector('.offer-advantages');
-    this.offerHeaders = [...this.offerAdvantages.querySelectorAll('.offer-advantages-heading')];
-    this.offerparagraphs = [...this.offerAdvantages.querySelectorAll('.offer-advantages-paragraph')];
+    this.offerHeaders = [
+      ...this.offerAdvantages.querySelectorAll('.offer-advantages-heading'),
+    ];
+    this.offerparagraphs = [
+      ...this.offerAdvantages.querySelectorAll('.offer-advantages-paragraph'),
+    ];
 
     this.offerSlider = this.offer.querySelector('.offer-slider');
-    this.offerSliderCounter = this.offerSlider.querySelector('.offer-slider-counter');
-    this.arrowPrev = this.offerSliderCounter.querySelector('.offer-slider-arrow-prev');
-    this.arrowNext = this.offerSliderCounter.querySelector('.offer-slider-arrow-next');
-    this.current = this.offerSliderCounter.querySelector('.offer-slider-current');
+    this.offerSliderCounter = this.offerSlider.querySelector(
+      '.offer-slider-counter',
+    );
+    this.arrowPrev = this.offerSliderCounter.querySelector(
+      '.offer-slider-arrow-prev',
+    );
+    this.arrowNext = this.offerSliderCounter.querySelector(
+      '.offer-slider-arrow-next',
+    );
+    this.current = this.offerSliderCounter.querySelector(
+      '.offer-slider-current',
+    );
     this.total = this.offerSliderCounter.querySelector('.offer-slider-total');
 
     this.offerSliderWrapper = this.offerSlider.querySelector(

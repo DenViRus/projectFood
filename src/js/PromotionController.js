@@ -4,7 +4,9 @@ export default class PromotionController {
     this.promotionText = this.promotion.querySelector('.promotion-text');
 
     this.promotionTimer = this.promotion.querySelector('.promotion-timer');
-    this.promotionTimerContent = this.promotionTimer.querySelector('.promotion-timer-content');
+    this.promotionTimerContent = this.promotionTimer.querySelector(
+      '.promotion-timer-content',
+    );
     this.promotionDays = this.promotionTimerContent.querySelector('.promotion-days');
     this.promotionHours = this.promotionTimerContent.querySelector('.promotion-hours');
     this.promotionMinutes = this.promotionTimerContent.querySelector('.promotion-minutes');
@@ -17,8 +19,8 @@ export default class PromotionController {
     return {
       total: time,
       dais: Math.floor(time / (1000 * 60 * 60 * 24)),
-      hours: Math.floor(((time / (1000 * 60 * 60)) % 24)),
-      minutes: Math.floor(((time / (1000 * 60)) % 60)),
+      hours: Math.floor((time / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((time / (1000 * 60)) % 60),
       seconds: Math.floor((time / 1000) % 60),
     };
   }
@@ -28,7 +30,7 @@ export default class PromotionController {
     for (const data in currentTimerData) {
       if (Object.hasOwnProperty.call(currentTimerData, data)) {
         const prop = timerData[data];
-        currentTimerData[data] = (prop < 10) ? `0${prop}` : prop;
+        currentTimerData[data] = prop < 10 ? `0${prop}` : prop;
       }
     }
     this.promotionDays.textContent = timerData.dais;
