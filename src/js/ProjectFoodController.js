@@ -29,8 +29,7 @@ export default class ProjectFoodController {
 
       if (this.target.closest('[data-modal]')) {
         event.preventDefault();
-        this.modal.modal.classList.toggle('hidden');
-        document.body.style.overflow = 'hidden';
+        this.modal.showModal();
       }
     };
     this.box.addEventListener('click', projectFoodListener1);
