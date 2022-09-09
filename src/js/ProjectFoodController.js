@@ -5,6 +5,7 @@ export default class ProjectFoodController {
     preview,
     offer,
     calculating,
+    menu,
     promotion,
     modal,
   ) {
@@ -13,6 +14,7 @@ export default class ProjectFoodController {
     this.preview = preview;
     this.offer = offer;
     this.calculating = calculating;
+    this.menu = menu;
     this.promotion = promotion;
     this.modal = modal;
   }
@@ -21,6 +23,7 @@ export default class ProjectFoodController {
     this.preview.previewControl();
     this.offer.offerControl();
     this.calculating.calculatingControl();
+    this.menu.menuControl();
     this.promotion.promotionControl();
     this.modal.modalControl();
 

@@ -2,6 +2,7 @@ import HeaderController from './HeaderController.js';
 import PreviewController from './PreviewController.js';
 import OfferController from './OfferController.js';
 import CalculatingController from './CalculatingController.js';
+import MenuController from './MenuController.js';
 import PromotionController from './PromotionController.js';
 import ModalController from './ModalController.js';
 import ProjectFoodController from './ProjectFoodController.js';
@@ -19,6 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const calculating = document.getElementById('calculating');
   const calculatingController = new CalculatingController(calculating);
 
+  const menu = document.getElementById('menu');
+  const menuController = new MenuController(menu);
+
   const promotion = document.getElementById('promotion');
   const promotionController = new PromotionController(promotion);
 
@@ -32,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     previewController,
     offerController,
     calculatingController,
+    menuController,
     promotionController,
     modalController,
   );
