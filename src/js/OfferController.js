@@ -1,12 +1,7 @@
-import pepper from '../img/slider/pepper.jpg';
-import food from '../img/slider/food-12.jpg';
-import oil from '../img/slider/olive-oil.jpg';
-import paprika from '../img/slider/paprika.jpg';
-
 export default class OfferController {
-  constructor(offer) {
+  constructor(offer, utils) {
     this.offer = offer;
-
+    this.utils = utils;
     this.offerAdvantages = this.offer.querySelector('.offer-advantages');
     this.offerHeaders = [
       ...this.offerAdvantages.querySelectorAll('.offer-advantages-heading'),
@@ -14,58 +9,17 @@ export default class OfferController {
     this.offerparagraphs = [
       ...this.offerAdvantages.querySelectorAll('.offer-advantages-paragraph'),
     ];
-
     this.offerSlider = this.offer.querySelector('.offer-slider');
     this.offerSliderCounter = this.offerSlider.querySelector(
       '.offer-slider-counter',
     );
-    this.arrowPrev = this.offerSliderCounter.querySelector(
-      '.offer-slider-arrow-prev',
-    );
-    this.arrowNext = this.offerSliderCounter.querySelector(
-      '.offer-slider-arrow-next',
-    );
     this.current = this.offerSliderCounter.querySelector(
       '.offer-slider-current',
     );
-    this.total = this.offerSliderCounter.querySelector('.offer-slider-total');
-
     this.offerSliderWrapper = this.offerSlider.querySelector(
       '.offer-slider-wrapper',
     );
     this.offerSliderIMG = this.offerSliderWrapper.querySelector('.offer-slide-img');
-
-    this.offerData = [
-      {
-        name: 'pepper',
-        index: '01',
-        img: {
-          src: pepper,
-          alt: 'pepper',
-        },
-      },
-      {
-        name: 'food',
-        img: {
-          src: food,
-          alt: 'food',
-        },
-      },
-      {
-        name: 'oil',
-        img: {
-          src: oil,
-          alt: 'oil',
-        },
-      },
-      {
-        name: 'paprika',
-        img: {
-          src: paprika,
-          alt: 'paprika',
-        },
-      },
-    ];
   }
 
   changeOfferSliderCounter(arrow) {
@@ -80,8 +34,8 @@ export default class OfferController {
     } else if (counter > 4) {
       counter = 1;
     }
-    this.offerSliderIMG.src = this.offerData[counter - 1].img.src;
-    this.offerSliderIMG.alt = this.offerData[counter - 1].img.alt;
+    this.offerSliderIMG.src = this.utils.offerData[counter - 1].img.src;
+    this.offerSliderIMG.alt = this.utils.offerData[counter - 1].img.alt;
     this.current.textContent = `0${counter}`;
   }
 

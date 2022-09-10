@@ -22,7 +22,10 @@ export default class ModalController {
     const modalListener1 = (event) => {
       this.target = event.target;
 
-      if (this.target.closest('.modal-close') || this.target.classList.contains('modal')) {
+      if (
+        this.target.closest('.modal-close')
+        || this.target.classList.contains('modal')
+      ) {
         event.preventDefault();
         this.closeModal();
       }
@@ -42,7 +45,10 @@ export default class ModalController {
     const modalListener3 = (event) => {
       this.target = event.target;
 
-      if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+      if (
+        window.pageYOffset + document.documentElement.clientHeight
+        >= document.documentElement.scrollHeight
+      ) {
         event.preventDefault();
         this.showModal();
         window.removeEventListener('scroll', modalListener3);

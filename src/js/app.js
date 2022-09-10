@@ -5,6 +5,7 @@ import CalculatingController from './CalculatingController.js';
 import MenuController from './MenuController.js';
 import PromotionController from './PromotionController.js';
 import ModalController from './ModalController.js';
+import Utils from './Utils.js';
 import ProjectFoodController from './ProjectFoodController.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,14 +15,16 @@ window.addEventListener('DOMContentLoaded', () => {
   const preview = document.getElementById('preview');
   const previewController = new PreviewController(preview);
 
+  const utils = new Utils();
+
   const offer = document.getElementById('offer');
-  const offerController = new OfferController(offer);
+  const offerController = new OfferController(offer, utils);
 
   const calculating = document.getElementById('calculating');
   const calculatingController = new CalculatingController(calculating);
 
   const menu = document.getElementById('menu');
-  const menuController = new MenuController(menu);
+  const menuController = new MenuController(menu, utils);
 
   const promotion = document.getElementById('promotion');
   const promotionController = new PromotionController(promotion);
