@@ -2,15 +2,15 @@ export default class ModalController {
   constructor(modal) {
     this.modal = modal;
 
-    // this.modalTimerId = setTimeout(() => {
-    //   this.showModal();
-    // }, 30000);
+    this.modalTimerId = setTimeout(() => {
+      this.showModal();
+    }, 30000);
   }
 
   showModal() {
     this.modal.classList.toggle('hidden');
     document.body.style.overflow = 'hidden';
-    // clearTimeout(this.modalTimerId);
+    clearTimeout(this.modalTimerId);
   }
 
   closeModal() {
@@ -23,8 +23,7 @@ export default class ModalController {
       this.target = event.target;
 
       if (
-        this.target.closest('.modal-close')
-        || this.target.classList.contains('modal')
+        this.target.closest('.modal-close') || this.target.classList.contains('modal')
       ) {
         event.preventDefault();
         this.closeModal();
@@ -46,8 +45,7 @@ export default class ModalController {
       this.target = event.target;
 
       if (
-        window.pageYOffset + document.documentElement.clientHeight
-        >= document.documentElement.scrollHeight
+        window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight
       ) {
         event.preventDefault();
         this.showModal();
