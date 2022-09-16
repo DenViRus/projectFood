@@ -34,8 +34,12 @@
 
 .order-input:hover {
   scale: 1.05;
-  background-color: lightgrey;
+  background-color: rgb(211, 211, 211);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.order-input:focus {
+  background-color: rgb(255, 255, 255);
 }
 
 .order-form-img {

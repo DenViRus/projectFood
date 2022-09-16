@@ -88,7 +88,6 @@ export default class PreviewController {
         if (this.target.classList.contains('tabheader-item-active')) {
           return;
         }
-
         const name = this.target.textContent;
         this.changePreviewData(this.target, name);
       }

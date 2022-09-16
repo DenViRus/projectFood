@@ -12,7 +12,7 @@ export default class PromotionController {
     this.promotionMinutes = this.promotionTimerContent.querySelector('.promotion-minutes');
     this.promotionSeconds = this.promotionTimerContent.querySelector('.promotion-seconds');
 
-    this.deadline = '2022-09-11';
+    this.deadline = '2023-02-20';
   }
 
   getTimeRemaining(time = Date.parse(this.deadline) - Date.parse(new Date())) {

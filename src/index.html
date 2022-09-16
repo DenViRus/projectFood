@@ -220,24 +220,26 @@
                     class="calculating-box-content calculating-params-box-content"
                     id="params"
                   >
-                    <input
-                      class="calculating-item calculating-params-item"
-                      type="text"
-                      id="height"
-                      placeholder="Введите рост"
-                    />
-                    <input
-                      class="calculating-item calculating-params-item"
-                      type="text"
-                      id="weight"
-                      placeholder="Введите вес"
-                    />
-                    <input
-                      class="calculating-item calculating-params-item"
-                      type="text"
-                      id="age"
-                      placeholder="Введите возраст"
-                    />
+                    <form class="calculating-form" id="calculatingForm" action="#">
+                      <input
+                        class="calculating-form-input"
+                        type="text"
+                        id="height"
+                        placeholder="Введите рост"
+                      />
+                      <input
+                        class="calculating-form-input"
+                        type="text"
+                        id="weight"
+                        placeholder="Введите вес"
+                      />
+                      <input
+                        class="calculating-form-input"
+                        type="text"
+                        id="age"
+                        placeholder="Введите возраст"
+                      />
+                    </form>
                   </div>
                 </div>
 
@@ -309,7 +311,7 @@
             </div>
           </div>
 
-          <div class="order">
+          <div class="order" id="order">
             <div class="container order-container">
               <h2 class="order-heading">Наше меню на день</h2>
               <form class="order-form" id="orderForm" action="#">

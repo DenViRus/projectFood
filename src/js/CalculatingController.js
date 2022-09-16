@@ -22,16 +22,31 @@ export default class CalculatingController {
     );
     this.activ = this.activBox.querySelector('.calculating-activ-box-content');
     this.total = this.totalBox.querySelector('.calculating-total-box-content');
+
+    this.calculatingForm = this.params.querySelector(
+      '.calculating-form',
+    );
+  }
+
+  changeCalculatingItem(item, itemsArr = [...item.closest('.calculating-box-content').querySelectorAll('.calculating-item')]) {
+    this.item = item;
+    itemsArr.forEach((el) => {
+      el.classList.remove('calculating-item-active');
+    });
+    this.item.classList.add('calculating-item-active');
   }
 
   calculatingControl() {
     const calculatingListener1 = (event) => {
       this.target = event.target;
 
-      // if (this.target.closest('.offer-slider-arrow')) {
-      //   event.preventDefault();
-      //   this.changeOfferSliderCounter(this.target);
-      // }
+      if (this.target.closest('.calculating-item')) {
+        event.preventDefault();
+        if (this.target.classList.contains('calculating-item-active')) {
+          return;
+        }
+        this.changeCalculatingItem(this.target);
+      }
     };
     this.calculating.addEventListener('click', calculatingListener1);
   }

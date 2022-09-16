@@ -3,9 +3,11 @@ import PreviewController from './PreviewController.js';
 import OfferController from './OfferController.js';
 import CalculatingController from './CalculatingController.js';
 import MenuController from './MenuController.js';
+import OrderController from './OrderController.js';
 import PromotionController from './PromotionController.js';
 import ModalController from './ModalController.js';
 import Utils from './Utils.js';
+import ProjectFoodRequest from './ProjectFoodRequest.js';
 import ProjectFoodController from './ProjectFoodController.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,11 +28,16 @@ window.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('menu');
   const menuController = new MenuController(menu, utils);
 
+  const order = document.getElementById('order');
+  const orderController = new OrderController(order);
+
   const promotion = document.getElementById('promotion');
   const promotionController = new PromotionController(promotion);
 
   const modal = document.getElementById('modal');
   const modalController = new ModalController(modal);
+
+  const projectFoodRequest = new ProjectFoodRequest('http://localhost:7070/');
 
   const projectContainer = document.getElementById('projectContainer');
   const projectFoodController = new ProjectFoodController(
@@ -40,8 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
     offerController,
     calculatingController,
     menuController,
+    orderController,
     promotionController,
     modalController,
+    projectFoodRequest,
   );
   projectFoodController.projectFoodControl();
 });
