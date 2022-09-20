@@ -226,18 +226,21 @@
                         type="text"
                         id="height"
                         placeholder="Введите рост"
+                        required
                       />
                       <input
                         class="calculating-form-input"
                         type="text"
                         id="weight"
                         placeholder="Введите вес"
+                        required
                       />
                       <input
                         class="calculating-form-input"
                         type="text"
                         id="age"
                         placeholder="Введите возраст"
+                        required
                       />
                     </form>
                   </div>
@@ -313,7 +316,7 @@
 
           <div class="order" id="order">
             <div class="container order-container">
-              <h2 class="order-heading">Наше меню на день</h2>
+              <h2 class="order-heading">Заказывай пробный день прямо сейчас!</h2>
               <form class="order-form" id="orderForm" action="#">
                 <input
                   class="order-input order-name-input"
@@ -447,6 +450,46 @@
                 type="phone"
                 name="modalPhone"
                 placeholder="Ваш номер телефона"
+                required
+              />
+              <input
+                class="modal-input modal-gender-input"
+                id="modalGenderInput"
+                type="text"
+                name="modalGender"
+                placeholder="Ваш пол"
+                required
+              />
+              <input
+                class="modal-input modal-height-input"
+                id="modalHeightInput"
+                type="number"
+                name="modalHeight"
+                placeholder="Ваш рост"
+                required
+              />
+              <input
+                class="modal-input modal-weight-input"
+                id="modalWeightInput"
+                type="number"
+                name="modalWeight"
+                placeholder="Ваш вес"
+                required
+              />
+              <input
+                class="modal-input modal-age-input"
+                id="modalAgeInput"
+                type="number"
+                name="modalAge"
+                placeholder="Ваш возраст"
+                required
+              />
+              <input
+                class="modal-input modal-activ-input"
+                id="modalActivInput"
+                type="text"
+                name="modalActiv"
+                placeholder="Ваша физическая активность"
                 required
               />
               <button class="button button-black modal-button">

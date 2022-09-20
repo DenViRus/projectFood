@@ -75,5 +75,11 @@ export default class Utils {
         },
       },
     ];
+
+    this.messages = {
+      loading: 'Loading...',
+      success: 'Success!',
+      error: 'Error!',
+    };
   }
 }

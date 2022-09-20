@@ -23,8 +23,76 @@ export default class ProjectFoodRequest {
     return `ERROR!!, ${await response.json()}, ${response.status}`;
   }
 
+  async addUser(formData, postURL) {
+    const data = {
+      name: formData.get('modalName').trim(),
+      phone: formData.get('modalPhone').trim(),
+      gender: formData.get('modalGender').trim(),
+      height: formData.get('modalHeight').trim(),
+      weight: formData.get('modalWeight').trim(),
+      age: formData.get('modalAge').trim(),
+      activ: formData.get('modalActiv').trim(),
+    };
+    const response = await fetch(postURL, {
+      method: this.postReq,
+      headers: this.contentTypeHeader,
+      body: JSON.stringify(data),
+    });
+    if (response.status >= 200 && response.status < 300) {
+      this.needData = await response.json();
+      return this.needData;
+    }
+    return `ERROR!!, ${await response.json()}, ${response.status}`;
+  }
+
+  // async addFood(formData, postURL) {
+  //   const data = { name: formData.get('name'), price: formData.get('price') };
+  //   const response = await fetch(postURL, {
+  //     method: this.postReq,
+  //     headers: this.contentTypeHeader,
+  //     body: JSON.stringify(data),
+  //   });
+  //   if (response.status >= 200 && response.status < 300) {
+  //     this.needData = await response.json();
+  //     return this.needData;
+  //   }
+  //   return `ERROR!!, ${await response.json()}, ${response.status}`;
+  // }
+
+  async getDataByID(getURL, id) {
+    const response = await fetch(`${getURL}/${id}`);
+    if (response.status >= 200 && response.status < 300) {
+      this.needData = await response.json();
+      return this.needData;
+    }
+    return `ERROR!!, ${await response.json()}, ${response.status}`;
+  }
+
+  async deleteDataByID(deleteURL, id) {
+    const response = await fetch(`${deleteURL}/${id}`, {
+      method: this.deleteReq,
+      headers: this.contentTypeHeader,
+    });
+    if (response.status >= 200 && response.status < 300) {
+      this.needData = await response.json();
+      return this.needData;
+    }
+    return `ERROR!!, ${await response.json()}, ${response.status}`;
+  }
+
   async projectFoodRequestControl() {
     console.log(await this.getData(this.urlContactData));
-    console.log(await this.getData(this.urlFoodData));
+    // // console.log(await this.getData(this.urlFoodData));
+
+    // const id1 = '0183f8ad-ebe5-4eb7-9560-84ca410bf0d4';
+    // // console.log(await this.getDataByID(this.urlContactData, id1));
+
+    // const id2 = '079f68bc-3cc1-4d3a-ab58-19156f5898a5';
+    // // console.log(await this.getDataByID(this.urlContactData, id2));
+
+    // console.log(await this.deleteDataByID(this.urlContactData, id1));
+    // // console.log(await this.deleteDataByID(this.urlContactData, id2));
+
+    // console.log(await this.getData(this.urlContactData));
   }
 }
