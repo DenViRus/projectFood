@@ -80,23 +80,23 @@ export default class ProjectFoodRequest {
     return `ERROR!!, ${await response.json()}, ${response.status}`;
   }
 
-  async projectFoodRequestControl() {
-    // console.log(await this.getData(this.urlContactData));
-    // // console.log(await this.getData(this.urlFoodData));
+  // async projectFoodRequestControl() {
+  //   // console.log(await this.getData(this.urlContactData));
+  //   // // console.log(await this.getData(this.urlFoodData));
 
-    // const id1 = '91dedc74-7357-4810-b9bc-ce0ea544c5e7';
-    // console.log(await this.getDataByID(this.urlContactData, id1));
+  //   // const id1 = '91dedc74-7357-4810-b9bc-ce0ea544c5e7';
+  //   // console.log(await this.getDataByID(this.urlContactData, id1));
 
-    // const id2 = 'd20a3585-2234-4e4d-a626-bfd36736c636';
-    // console.log(await this.getDataByID(this.urlContactData, id2));
+  //   // const id2 = 'd20a3585-2234-4e4d-a626-bfd36736c636';
+  //   // console.log(await this.getDataByID(this.urlContactData, id2));
 
-    // const id3 = '269ce89e-e714-4793-b5bb-01725db24e3c';
-    // console.log(await this.getDataByID(this.urlContactData, id3));
+  //   // const id3 = '269ce89e-e714-4793-b5bb-01725db24e3c';
+  //   // console.log(await this.getDataByID(this.urlContactData, id3));
 
-    // console.log(await this.deleteDataByID(this.urlContactData, id1));
-    // console.log(await this.deleteDataByID(this.urlContactData, id2));
-    // console.log(await this.deleteDataByID(this.urlContactData, id3));
+  //   // console.log(await this.deleteDataByID(this.urlContactData, id1));
+  //   // console.log(await this.deleteDataByID(this.urlContactData, id2));
+  //   // console.log(await this.deleteDataByID(this.urlContactData, id3));
 
-    // console.log(await this.getData(this.urlContactData));
-  }
+  //   // console.log(await this.getData(this.urlContactData));
+  // }
 }
