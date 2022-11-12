@@ -5,6 +5,7 @@ import CalculatingController from './CalculatingController.js';
 import MenuController from './MenuController.js';
 import OrderController from './OrderController.js';
 import PromotionController from './PromotionController.js';
+import GameButtonSectionController from './GameButtonSectionController.js';
 import ModalController from './ModalController.js';
 import Utils from './Utils.js';
 import ProjectFoodRequest from './ProjectFoodRequest.js';
@@ -34,6 +35,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const promotion = document.getElementById('promotion');
   const promotionController = new PromotionController(promotion);
 
+  const gameButtonSection = document.getElementById('gameButtonSection');
+  const gameButtonSectionController = new GameButtonSectionController(gameButtonSection);
+
   const modal = document.getElementById('modal');
   const modalController = new ModalController(modal);
 
@@ -49,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
     menuController,
     orderController,
     promotionController,
+    gameButtonSectionController,
     modalController,
     projectFoodRequest,
   );

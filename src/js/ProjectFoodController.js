@@ -8,6 +8,7 @@ export default class ProjectFoodController {
     menu,
     order,
     promotion,
+    gameButtonSection,
     modal,
     request,
   ) {
@@ -19,6 +20,7 @@ export default class ProjectFoodController {
     this.menu = menu;
     this.order = order;
     this.promotion = promotion;
+    this.gameButtonSection = gameButtonSection;
     this.modal = modal;
     this.request = request;
 
@@ -45,6 +47,7 @@ export default class ProjectFoodController {
     this.menu.menuControl();
     this.order.orderControl();
     this.promotion.promotionControl();
+    this.gameButtonSection.gameButtonSectionControl();
     this.modal.modalControl();
     this.request.projectFoodRequestControl();
 
